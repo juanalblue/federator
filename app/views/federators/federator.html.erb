@@ -1,0 +1,29 @@
+<title>FSG</title>
+<div class="container">
+  <div class="row">
+    <div class="span8">
+
+      <h1>Federated Session Generator</h1>
+
+      <hr>
+      
+      <p>Enter your user name, access key, and secret key here</p>
+      <%= form_tag("/federators/federate", :method=>"post") do %>
+      <%= text_field_tag(:user_name) %><br>
+      <%= text_field_tag(:access_key) %><br>
+      <%= text_field_tag(:secret_key) %><br>
+      <%= submit_tag("Federate", :class=>"btn btn-primary") %>
+      <% end %>
+
+      <% if !flash[:notice].nil? %>
+      <div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert" >×</button>
+	<strong><%= link_to flash[:notice], flash[:notice] %></strong>
+      </div>
+      <% end %>
+	
+      </div> <!-- well --> 
+    </div> <!-- span4 -->
+  </div> <!-- row -->
+</div> <!-- container -->
+

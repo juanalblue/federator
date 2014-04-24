@@ -1,0 +1,10 @@
+class FederatorController < ApplicationController
+  def index
+    @federator = Federator.federate
+  end
+
+  def federate
+     = Todo.create(:todo_item => params[:todo_text] params[:todo][:todo_item])
+    redirect_to :action => 'index'
+  end
+end

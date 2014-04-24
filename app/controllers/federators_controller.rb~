@@ -1,0 +1,4 @@
+class FederatorsController < ApplicationController
+  def federator
+  end
+end

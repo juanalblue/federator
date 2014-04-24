@@ -1,4 +1,7 @@
 Federator::Application.routes.draw do
+  get "federators/federator"
+  match "federators/federate" => "federators#federate", via: [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -37,7 +40,10 @@ Federator::Application.routes.draw do
   #     resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
+  #     end #       post 'toggle'
   #     end
+  #
+  #  
   #   end
 
   # Example resource route with concerns:

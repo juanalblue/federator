@@ -1,0 +1,4 @@
+ <%= form_for @federator, :url => { :action => "federate" }  do |f|  %>
+    <%= f.text_field  :user_name %>
+    <%= f.submit "Federate", class: "btn btn-primary" %>
+ <%end%>
